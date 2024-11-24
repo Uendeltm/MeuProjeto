@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Seja bem vindo!</h1>
+
+    <p>Agora são: {{ now }}</p>
+
+    <ul>
+    {% for transacao in transacoes %}
+
+        {%if transacao == "t1" %}
+            <li><b>{{ transacao }}</b></li>
+        {% else %}
+            <li>{{ transacao }}</li>
+        {% endif %}
+
+    {% endfor %}
+    </ul>
+</body>
+</html>
